@@ -1,0 +1,11 @@
+<%- include("header.ejs") %>
+<link rel="stylesheet" href="blog-template.css">
+<%- include("menubar.ejs") %>
+<main class="main">
+    <a href="/blogs"><button class="back">Back</button></a>
+    <section class="blog">
+        <h1><%=heading%></h1>
+        <p><%=content%></p>
+    </section>
+</main>
+<%- include("footer.ejs") %>

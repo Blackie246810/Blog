@@ -1,0 +1,12 @@
+<%- include("header.ejs") %>
+<link rel="stylesheet" href="post.css">
+<%- include("menubar.ejs") %>
+<main class="main">
+    <form action="blogs" method="post" class="form">
+        <h1 class="head">Blog Post</h1>
+        <input type="text" name="heading" id="heading" placeholder="Heading" required>
+        <textarea name="blog" id="blog" placeholder="Blog" required="true"></textarea>
+        <input type="submit" value="Submit" id="submit">
+    </form>
+</main>
+<%- include("footer.ejs") %>

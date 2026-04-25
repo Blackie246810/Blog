@@ -1,0 +1,12 @@
+<div class="container">
+    <h1>Blogs</h1>
+    <ul>
+        <% if(locals.headers){ %>
+            <% for(let i = headers.length - 1; i >= 0; i--){ %>
+                <li><a href="/<%=location%>?id=<%=headers[i][0]%>"><%=headers[i][1]%></a></li>
+            <% } %>
+        <% }else{ %>
+            <li id="none">No blogs have been posted yet...</li>
+        <% } %>
+    </ul>
+</div>

@@ -1,0 +1,410 @@
+*{
+    --background: #F7F8F0;
+    --secondary-bgc: #9CD5FF;
+    --item-bgc: #7AAACE;
+    --dark: #3d5d75;
+    --header-bgc: rgba(94, 128, 166);
+    --home-header: rgb(184, 255, 137);
+    --footer-bgc: #292828;
+    --secondary-color: white;
+    --tertiary-color: rgb(204, 255, 196);
+    --footer-heading: white;
+    --footer-text: rgb(200, 200, 200);
+    --blog-header: white;
+    --blog-color: rgb(51, 102, 134);
+    --list-alternative: rgb(162, 255, 196);
+    --error-color: rgb(232, 69, 69);
+    --primary-font:  Helvetica;
+    --secondary-font: Verdana;
+    --footer-heading-font: Verdana;
+    --footer-list-font: georgia;
+    --footer-default-font: Arial, Helvetica, sans-serif;
+    --footer-p-font: Verdana;
+}
+html, body{
+    width: 100vw;
+    height: 140vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    background-color: var(--dark);
+    overflow-x: hidden;
+}
+header.main-header{
+    width: 100%;
+    height: 15%;
+    position: fixed;
+    top: 0;
+    padding: 1%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--header-bgc);
+    z-index: 2;
+}
+header.main-header::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    background-color: var(--header-bgc);
+    filter: blur(15px);
+}
+header.main-header section.container{
+    position: relative;
+    width: 50%;
+    height: 75%;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    border-radius: 3rem;
+    background-color: var(--secondary-bgc);
+}
+header.main-header section.container a.item{
+    text-decoration: none;
+    position: relative;
+    height: 75%;
+    width: 25%;
+    z-index: 2;
+    flex-grow: 1;
+    flex-shrink: 1;
+    list-style: none;
+    text-align: center;
+    font-family: var(--primary-font);
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header.main-header section.container .slider{
+    position: absolute;
+    left: 0.6rem;
+    height: calc(100% - 1rem);
+    width: 25%;
+    border-radius: 3rem;
+    background-color: var(--background);
+    opacity: 0.75;
+    box-sizing: border-box;
+    z-index: 1;
+}
+header.main-header section.container a.item:hover, header.main-header section.container a.slider:hover{
+    cursor: pointer;
+}
+main.body{
+    width: 100%;
+    height: 100%;
+    padding-top: 7.5%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+main.main{
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-bottom: 1.5rem;
+    padding: 3.5rem 6rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+footer.footer{
+    width: 100%;
+    height: 50vh;
+    background-color: var(--footer-bgc);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem 3rem 3rem;
+    box-sizing: border-box;
+}
+footer.footer section.content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+footer.footer section.content .about{
+    width: 35%;
+    height: 100%;
+    padding: 1rem;
+    color: var(--footer-text);
+    font-size: 1.25rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+footer.footer section.content .about p{
+    line-height: 1.75rem;
+    font-family: var(--footer-p-font);
+}
+footer.footer section.content .about span{
+    font-size: 2.5rem;
+    display: block;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--footer-heading);
+    font-family: cursive;
+    font-style: italic;
+}
+footer.footer section.content .contact{
+    padding: 1rem;
+    width: 35%;
+    height: 100%;
+    box-sizing: border-box;
+}
+footer.footer h6{
+    font-size: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--footer-heading);
+    font-family: var(--footer-heading-font);
+    font-weight: lighter;
+    margin-left: 1rem;
+}
+footer.footer section.content .contact ul.cont li{
+    color: var(--footer-text);
+    font-size: 1.35rem;
+    line-height: 2.25rem;
+    position: relative;
+    list-style: none;
+    font-family: var(--footer-list-font);
+}
+footer.footer section.content .contact ul.cont li::before{
+    content: "";
+    position: absolute;
+    width: 1.25rem;
+    height: 1.25rem;
+    display: block;
+    background-position: center;
+    background-size: contain;
+    top: 0.5rem;
+    left: -1.75rem;
+}
+footer.footer section.content .contact ul.cont li:nth-child(1)::before{
+    background-image: url("images/location.svg");
+}
+footer.footer section.content .contact ul.cont li:nth-child(2)::before{
+    background-image: url("images/phone.svg");
+}
+footer.footer section.content .contact ul.cont li:nth-child(3)::before{
+    background-image: url("images/envelope.svg");
+}
+footer.footer section.content .contact ul.cont li:nth-child(4)::before{
+    background-image: url("images/instagram.svg");
+}
+footer.footer section.content .links{
+    width: 20%;
+    height: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+footer.footer section.content .links ul.li li.l{
+    list-style: none;
+}
+footer.footer section.content .links ul.li li.l a{
+    text-decoration: none;
+    color: var(--footer-text);
+    font-size: 1.35rem;
+    line-height: 2.5rem;
+    font-family: var(--footer-default-font);
+}
+footer.footer section.content .links ul.li li.l a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    color: var(--footer-heading);
+}
+@media only screen and (max-width: 1400px){
+    footer.footer{
+        padding: 2rem 1rem 2rem 2rem;
+    }
+    footer.footer section.content .contact, footer.footer section.content .about, footer.footer section.content .links{
+        padding: 0.5rem;
+    }
+    footer.footer section.content .about{
+        font-size: 1.25rem;
+    }
+    footer.footer section.content .links ul.li li.l a{
+        font-size: 1.25rem;
+    }
+    footer.footer section.content .contact ul.cont li{
+        font-size: 1rem;
+        line-height: 1.75rem;
+    }
+    main.main{
+        padding: 2rem 4rem;
+    }
+}
+@media only screen and (max-width: 1150px){
+    footer.footer h6{
+        font-size: 1.75rem;
+        margin: 1.25rem 1.75rem 1rem 0;
+    }
+    footer.footer section.content .about span{
+        font-size: 2rem;
+    }
+    header.main-header section.container{
+        width: 75%;
+    }
+    footer.footer section.content .contact{
+        width: 40%;
+    }
+    footer.footer section.content .contact ul.cont li::before{
+        width: 1rem;
+        height: 1rem;
+    }
+    footer.footer section.content .contact ul.cont li{
+        line-height: 1.5rem;
+    }
+}
+@media only screen and (max-width: 850px){
+    footer.footer h6{
+        font-size: 1.25rem;
+        margin: 1rem 0 0 1rem;
+    }
+    footer.footer section.content .about span{
+        font-size: 1.5rem;
+    }
+    footer.footer section.content .about p{
+        line-height: 1.5rem;
+        font-size: 1rem;
+    }
+    footer.footer section.content .contact{
+        width: 45%;
+    }
+    main.main{
+        padding: 2rem;
+    }
+
+}
+@media only screen and (max-width: 750px){
+    footer.footer{
+        padding: 1rem 0.5rem 1rem 1rem;
+    }
+    header.main-header{
+        height: 10%;
+    }
+    header.main-header section.container a.item{
+        font-size: 1rem;
+    }
+    footer.footer section.content .contact, footer.footer section.content .about, footer.footer section.content .links{
+        padding: 0.15rem;
+    }
+}
+@media only screen and (max-width: 600px){
+    footer.footer h6{
+        font-size: 1.25rem;
+        margin: 1rem 0 0 1rem;
+    }
+    footer.footer section.content .about span{
+        font-size: 1.5rem;
+    }
+    footer.footer section.content .about p{
+        font-size: 0.85rem;
+    }
+    footer.footer section.content .links ul.li li.l a{
+        font-size: 1rem;
+    }
+    footer.footer section.content .contact ul.cont li{
+        font-size: 0.75rem;
+    }
+    footer.footer section.content .contact ul.cont li::before{
+        width: 0.75rem;
+        height: 0.75rem;
+        left: -1.25rem;
+    }
+    main.main{
+        padding: 2rem 1rem;
+    }
+}
+@media only screen and (max-width: 500px){
+    footer.footer h6{
+        font-size: 1rem;
+        margin: 0.5rem 0 0 1rem;
+        text-align: center;
+    }
+    footer.footer section.content .about span{
+        font-size: 1rem;
+    }
+    footer.footer section.content .about p{
+        font-size: 0.75rem;
+        line-height: 1.25rem;
+    }
+    footer.footer section.content .links ul.li li.l a{
+        font-size: 0.85rem;
+    }
+    footer.footer section.content .links ul.li{
+        padding-left: 0.5rem;
+    }
+    footer.footer section.content .contact ul.cont li{
+        font-size: 0.75rem;
+        line-height: 1.25rem;
+    }
+    footer.footer section.content .contact ul.cont{
+        padding-left: 1rem;
+    }
+    footer.footer section.content .contact ul.cont li::before{
+        width: 0.5rem;
+        height: 0.5rem;
+        left: -1rem;
+    }
+    header.main-header section.container{
+        width: 97.5%;
+    }
+
+}
+@media only screen and (max-width: 450px){
+    footer.footer{
+        height: auto;
+    }
+    footer.footer section.content{
+        flex-wrap: wrap;
+    }
+    footer.footer section.content .contact{
+        min-width: 180px;
+        height: auto;
+    }
+    footer.footer section.content .about{
+        min-width: 145px;
+        height: auto;
+    }
+    footer.footer section.content .links{
+        width: 75%;
+        height: auto;
+    }
+    footer.footer section.content .links ul.li{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+@media only screen and (max-width: 350px){
+    header.main-header{
+        height: 7.5%;
+    }
+    header.main-header section.container a.item{
+        font-size: 0.85rem;
+    }
+    footer.footer section.content .contact{
+        width: 75%;
+        height: auto;
+    }
+    footer.footer section.content .about{
+        width: 75%;
+        height: auto;
+    }
+}

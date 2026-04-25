@@ -1,0 +1,3 @@
+header.main-header section.container .slider{
+    transform: translateX(calc(100% - 0.5rem));
+}

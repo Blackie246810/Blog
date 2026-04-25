@@ -1,0 +1,17 @@
+<%- include("header.ejs") %>
+<link rel="stylesheet" href="blog-modify.css">
+<%- include("menubar.ejs") %>
+<main class="main">
+    <a href="/update"><button class="back">Back</button></a>
+    <form action="update" method="post" class="form">
+        <h1 class="head">Blog Update</h1>
+        <input type="text" name="heading" id="heading" placeholder="Heading" value="<%=heading%>" required>
+        <textarea name="blog" id="blog" placeholder="Blog" required="true"><%=content%></textarea>
+        <input type="text" name="page" value="<%=blog%>" id="hidden" hidden>
+        <span>
+            <input type="submit" value="Update" id="submit">
+            <a href="/delete?id=<%=blog%>"><input type="button" id="delete" value="Delete"></a>
+        </span>
+    </form>
+</main>
+<%- include("footer.ejs") %>

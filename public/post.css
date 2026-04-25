@@ -1,0 +1,109 @@
+header.main-header section.container .slider{
+    transform: translateX(calc(200% - 0.75rem));
+}
+main.main > form.form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2.5rem;
+    box-sizing: border-box;
+    background-color: var(--secondary-bgc);
+    border: none;
+    border-radius: 1rem;
+}
+main.main > form.form > h1.head{
+    font-size: 2.5rem;
+    font-family: var(--primary-font);
+    color: var(--dark);
+    margin-bottom: 2rem;
+}
+main.main > form.form > input#heading{
+    width: 75%;
+    padding: 0.75rem;
+    font-size: 1.25rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
+    border: none;
+    background-color: var(--blog-header);
+    color: var(--blog-color);
+    font-family: var(--primary-font);
+}
+main.main > form.form > textarea#blog{
+    padding: 0.75rem;
+    margin: 1rem;
+    width: 75%;
+    height: 20em;
+    font-size: 1rem;
+    resize: vertical;
+    border: none;
+    border-radius: 0.5em;
+    background-color: var(--blog-header);
+    color: var(--blog-color);
+    font-family: var(--secondary-font);
+}
+main.main > form.form > input#heading:focus, main.main > form.form > textarea#blog:focus{
+    outline: none;
+}
+main.main > form.form > input#submit{
+    padding: 0.75rem 1.5rem;
+    margin-top: 2rem;
+    font-size: 1.25rem;
+    border: none;
+    background-color: var(--blog-color);
+    color: var(--blog-header);
+    font-weight: bold;
+    border-radius: 1.5rem;
+    box-shadow: 2px 2px 5px var(--dark), -2px 2px 5px var(--dark), 2px -2px 5px var(--blog-header), -2px -2px 5px var(--blog-header);
+    transition: box-shadow 0.25s ease;
+}
+main.main > form.form > input#submit:hover{
+    cursor: pointer;
+    box-shadow: 2px 2px 5px var(--blog-header), -2px 2px 5px var(--blog-header), 2px -2px 5px var(--dark), -2px -2px 5px var(--dark);
+}
+main.main > form.form > input#submit:active{
+    box-shadow: 1px 1px 3px var(--blog-header), -1px 1px 3px var(--blog-header), 1px -1px 3px var(--dark), -1px -1px 3px var(--dark);
+}
+@media only screen and (max-width: 1400px){
+    main.main > form.form{
+        padding: 2rem;
+        width: 85%;
+        margin-top: 2rem;
+    }
+}
+@media only screen and (max-width: 800px){
+    main.main > form.form > h1.head{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    main.main > form.form{
+        width: 90%;
+    }
+    main.main > form.form > input#heading, main.main > form.form > textarea#blog{
+        width: 85%;
+    }
+}
+@media only screen and (max-width: 500px){
+    main.main > form.form{
+        width: 100%;
+    }
+    main.main > form.form > h1.head{
+        font-size: 1.5rem;
+    }
+    main.main > form.form > input#heading{
+        font-size: 1.15rem;
+    }
+    main.main > form.form > input#submit{
+        font-size: 1rem;
+    }
+    main.main > form.form > input#heading, main.main > form.form > textarea#blog{
+        width: 90%;
+    }
+}
+@media only screen and (max-width: 400px){
+    main.main > form.form > input#heading, main.main > form.form > textarea#blog{
+        width: 100%;
+    }
+}
